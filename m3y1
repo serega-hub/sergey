@@ -1,0 +1,53 @@
+from flask import Flask
+import random
+
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return f'<h1>Привет!</h1> <h2>Это мой первый проект на python + html</h2> <ul style="list-style-type:disclosure-closed; font-size:120%;"><li><a href="/random_fact">Посмотреть случайный факт!</a> - здесь ты можешь узнать 8 интересных фактов о технологических зависимостях.</li><li><a href="/heads_or_tails">Орёл или решка!</a> - а тут можешь поиграть в игру.</li><li><a href="/cs2_case">Открытие кейса из игры - Counter Strike 2!</a> - а тут можешь испытать удачу.</li></ul>'
+    
+    
+@app.route("/random_fact")
+def random_fact():
+    facts_list = [
+        'Большинство людей, страдающих технологической зависимостью, испытывают сильный стресс, когда они находятся вне зоны покрытия сети или не могут использовать свои устройства.' ,
+        'Согласно исследованию, проведенному в 2018 году, более 50% людей в возрасте от 18 до 34 лет считают себя зависимыми от своих смартфонов.',
+        'Изучение технологической зависимости является одной из наиболее актуальных областей научных исследований в настоящее время.',
+        'Согласно исследованию, проведенному в 2019 году, более 60% людей отвечают на рабочие сообщения в своих смартфонах в течение 15 минут после того, как они вышли с работы.',
+        'Один из способов борьбы с технологической зависимостью - это поиск занятий, которые приносят удовольствие и улучшают настроение.',
+        'Илон Маск утверждает, что социальные сети созданы для того, чтобы удерживать нас внутри платформы, чтобы мы тратили как можно больше времени на просмотр контента.',
+        'Илон Маск также выступает за регулирование социальных сетей и защиту личных данных пользователей. Он утверждает, что социальные сети собирают огромное количество информации о нас, которую потом можно использовать для манипулирования нашими мыслями и поведением.',
+        'Социальные сети имеют как позитивные, так и негативные стороны, и мы должны быть более осознанными в использовании этих платформ.'
+        ]
+    return f'<h1>Случайный факт</h1> <nbr><h2>{random.choice(facts_list)}</h2> <nbr> <ul style="list-style-type:disclosure-closed; font-size:120%;"><li><a href="/random_fact">Посмотреть другой факт!</li></ul></ul> <nbr> <ul style="list-style-type:disclosure-closed; font-size:120%;"><li><a href="/">Вернуться на главную страницу</li></ul>'
+
+@app.route('/heads_or_tails')
+def heads_or_tails():
+    orol_ili_reshka = ['Орёл','Решка']
+    return f'<h1>Игра - Орёл или решка</h1> <nbr><h2>{random.choice(orol_ili_reshka)}</h2> <nbr> <ul style="list-style-type:disclosure-closed; font-size:120%;"><li><a href="/heads_or_tails">Подкинуть монетку ещё раз!</li></ul> <nbr> <ul style="list-style-type:disclosure-closed; font-size:120%;"><li><a href="/">Вернуться на главную страницу</li></ul>'
+
+@app.route("/cs2_case")
+def cs2_case():
+    cs_case = ['<img src ="https://skinout.gg/ru/blog/content/images/2024/08/15-2.png" alt="Отображение картинки не возможно" style="max-height:400px"><p style="font-size:150%; color:yellow;">Вам очень везёт!!!</p>',
+               '<img src ="https://storage.yandexcloud.net/s3-metaratings-storage/images/7b/a0/7ba02a3df76fbbbb2e31faf032b54ebe.png" alt="Отображение картинки не возможно"style="max-height:400px"> <p style="font-size:150%; color:yellow;">КАК?!!!</p>',
+               '<img src ="https://img0.festima.ru/1/XD2CeETPVIv1R2zla" alt="Отображение картинки не возможно"style="max-height:400px"> <p style="font-size:150%; color:blue;">Очень хорошо!!!</p>',
+               '<img src ="https://sun9-74.userapi.com/impg/4Jc74uahVAa0wuCrjmZiIIajMxyIywx9Y1kyLA/y7YdajW5Xr8.jpg?size=604x340&quality=95&sign=1a21a8695f1a782007e5b06d8cea925a&type=album" alt="Отображение картинки не возможно"style="max-height:400px"><p style="font-size:150%; color:blue;">Вам везёт!!!</p>',
+               '<img src ="https://i.ytimg.com/vi/oLDkezWoihI/sddefault.jpg" alt="Отображение картинки не возможно"style="max-height:400px"><p style="font-size:150%; color:green;">Не плохо!!!</p>',
+               '<img src ="https://sun9-51.userapi.com/impg/-BhDyoFzgrEqJtUmftBVtidgQQGK-PkzsVFeoA/WoTfulq8JJo.jpg?size=510x340&quality=96&crop=64,0,1152,768&sign=287bd5e0cde6cbd623457e18a2750724&type=album" alt="Отображение картинки не возможно"style="max-height:400px"> <p style="font-size:150%; color:green;">Не плохо!!!</p>',
+               '<img src ="https://i.ytimg.com/vi/Zlv3NOEz5ZA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBZM-LUPfZsNMYW4zFCsxdzpWbtvw" alt="Отображение картинки не возможно"style="max-height:400px"> <p style="font-size:150%; color: dark brown;">Не плохо!!!</p>',
+               '<img src ="https://skinout.gg/ru/blog/content/images/2024/08/5-2.png" alt="Отображение картинки не возможно"style="max-height:400px"> <p style="font-size:150%; color:red;">В следующий раз повезёт!!!</p>',
+               '<img src ="https://skinout.gg/ru/blog/content/images/2024/08/6-4.png" alt="Отображение картинки не возможно"style="max-height:400px"> <p style="font-size:150%; color:dark red;">Не очень!!!</p>',
+               '<img src ="https://steamuserimages-a.akamaihd.net/ugc/2026092774167573641/8FE58AE5553EB2F2526CD0B1C7DC5EBD607CF8F8/" alt="Отображение картинки не возможно"style="max-height:400px"> <p style="font-size:150%; color:red;">Не очень!!!</p>',
+               '<img src ="https://steamuserimages-a.akamaihd.net/ugc/2005845011340493195/89B390BC454FA84B9459DDB81524A8A9DCA246B8/" alt="Отображение картинки не возможно"style="max-height:400px"> <p style="font-size:150%; color:brown;">В следующий раз повезёт!!!</p>',
+               '<img src ="https://avatars.dzeninfra.ru/get-zen_doc/1677529/pub_5f32ad3418ad41461a1fe793_5f330820050b2d126c9a6d5b/scale_1200" alt="Отображение картинки не возможно"style="max-height:400px"> <p style="font-size:150%; color:black;">В следующий раз повезёт!!!</p>',
+               '<img src ="https://avatars.dzeninfra.ru/get-zen_doc/1852544/pub_5f6f6953fde6297ce31a798f_5f6f7119fde6297ce325135a/scale_1200" alt="Отображение картинки не возможно"style="max-height:400px"> <p style="font-size:150%; color:grey;">Не очень!!!</p>'
+    ]
+
+    return f'<h1>Открытие кейса из игры Counter-Strike 2</h1> <nbr><h2>Вам выпал этот предмет:</h2> {random.choice(cs_case)} </br> <ul style="list-style-type:disclosure-closed; font-size:120%;"><li><a href="/cs2_case">Открыть кейс ещё раз.</li></ul></ul> <nbr> <ul style="list-style-type:disclosure-closed; font-size:120%;"><li><a href="/">Вернуться на главную страницу</li></ul>'
+
+
+
+    
+
+app.run(debug=True)
