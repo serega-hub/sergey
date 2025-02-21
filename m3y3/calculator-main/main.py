@@ -56,16 +56,7 @@ def submit_form():
     date = request.form['date']
 
     with open('form.txt', 'a',) as f:
-            f.write(name + '\n') 
-
-    with open('form.txt', 'a',) as f:
-            f.write(email + '\n')
-
-    with open('form.txt', 'a',) as f:
-            f.write(address + '\n')        
-
-    with open('form.txt', 'a',) as f:
-            f.write(date + '\n')
+            f.write(name + ' ' + email + ' ' + address + ' ' + date + '\n') 
 
     # здесь вы можете сохранить данные или отправить их по электронной почте
     return render_template('form_result.html', 
