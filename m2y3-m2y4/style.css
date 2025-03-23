@@ -1,0 +1,60 @@
+body {
+    font-family: Arial,  sans-serif; /* Семейство шрифтов */
+    font-size: 20px; /* Размер основного шрифта в <p></p>  */
+    background-color: #FFFFFF; /* Цвет фона веб-страницы */
+    color: #5988FF; /* Цвет основного текста */ 
+    text-align: justify;
+}
+h1 {
+    color: #D6FF6B; /* Цвет заголовка */
+    font-size: 30px; /* Размер шрифта в пунктах */
+    font-family: Georgia, serif; /* Семейство шрифтов */
+    text-decoration: underline dotted;
+    text-decoration-color: rgb(243, 227, 4);
+    background-color: #000000;
+    text-align: center;
+}
+h2 {
+    color: #FD98FB;
+    background-color: #000000;
+    text-decoration: underline solid;
+    text-decoration-color: white;
+    text-align: center;
+}
+img {
+    border: 5px solid #000000;
+    max-width: 800px;
+    height: auto;
+    
+}
+iframe {
+    background-color: #5988FF;
+    border: 5px solid #000000;
+}
+
+
+@keyframes color-change {
+    0% {
+      color: #D6FF6B;
+    }
+  
+    50% {
+      color: #5988FF;
+    }
+  
+    100% {
+      color: #D6FF6B;
+    }
+}
+
+h1 {
+    animation: color-change 3s infinite;
+}
+h2:hover {
+    animation: color-change 3s infinite;
+}
+
+
+
+
+
