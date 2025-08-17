@@ -1,0 +1,22 @@
+import requests
+import telebot
+import os
+import random
+from config import token 
+
+bot = telebot.TeleBot(token)
+
+@bot.message_handler(commands=['start'])
+def send_welcome(message):
+    bot.reply_to(message, "Привет! Я<u> <b> Health/bot </b> </u> \nС моей помошью вы можете выучить очень много всего. \n<u>Вот что я умею:</u> \n<blockquote>/start - <i>Эта команда покажет вам все команды</i> \n/health_image - <i>Эта команда отправит вам случайную картинку связанную с здоровьем.</i></blockquote> ", parse_mode='HTML')
+
+@bot.message_handler(commands=['health_image'])
+def send_image(message):
+    images = os.listdir('m8y1-m8y4_final/images')
+    img_name = random.choice(images)
+    with open(f'm8y1-m8y4_final/images/{img_name}', 'rb') as f:  
+        bot.send_photo(message.chat.id, f)
+    
+
+
+bot.polling()
