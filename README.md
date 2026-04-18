@@ -8,4 +8,4 @@
 работу с assert и тестовыми сценариями
 организацию тестовой структуры проекта
 
-![pytest](https://docs.pytest.org/en/stable/_static/pytest_logo_curves.svg)
+![pytest](["C:\Users\User\Desktop\Dataset\test\Pytest_logo.svg.png"](https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:Pytest_logo.svg))
