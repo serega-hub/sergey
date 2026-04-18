@@ -10,4 +10,4 @@
 
 ## 🧪 Используемый инструмент
 
-![pytest](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Pytest_logo.svg/512px-Pytest_logo.svg.png)
+![pytest](images/pytest.svg)
