@@ -10,4 +10,4 @@
 
 ## 🧪 Используемый инструмент
 
-<img width="327" height="330" alt="Снимок экрана 2026-04-18 171242" src=https://medium.com/@pauloarthurvm/setting-up-a-pytest-testing-framework-the-basics-of-the-basics-926afc95fd4f>
+<img width="300" height="300" alt="Снимок экрана 2026-04-18 171242" src=https://medium.com/@pauloarthurvm/setting-up-a-pytest-testing-framework-the-basics-of-the-basics-926afc95fd4f>
